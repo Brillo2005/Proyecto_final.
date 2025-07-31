@@ -1,0 +1,428 @@
+/* GENERAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* FUENTE Y BACKGROUND GLOBAL */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(to right, #379e48, #0d5f3d);
+  color: white;
+  padding: 20px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 100px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.logo:hover {
+  box-shadow: 0 0 20px 0 rgb(216, 216, 5);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* HERO SECTION */
+.hero {
+  width: 100%;
+  height: 100vh;
+  background: url('../img/fondo\,.jpg') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 60px;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 60px;
+  max-width: 600px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  max-width: 600px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.hero .btn {
+  width: 150px;
+  padding: 10px;
+  background-color: aquamarine;
+  margin: 30px 0;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 20px;
+  color: black;
+}
+
+.btn:hover {
+  background-color: #189c3d;
+  transition: 1s;
+}
+
+/* TARJETAS INFORMATIVAS  */
+.section-grid {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 60px;
+  background-color: #132f03;
+  flex-wrap: wrap;
+}
+
+.section-grid .card {
+  background-color: #080c1c;
+  border-radius: 35px;
+  overflow: hidden;
+  max-width: 280px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(83, 247, 12, 0.3);
+  margin: 20px;
+}
+
+.section-grid img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.section-grid h3 {
+  margin: 15px 0 10px;
+}
+
+.section-grid p {
+  padding: 0 15px 20px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* BIENESTAR FÍSICO */
+.aviacion-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 40px;
+  background-image: url('../img/fisico_fnt.jpg');
+  margin: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(122, 215, 8, 0.2);
+  color: #333;
+}
+
+.aviacion-texto {
+  flex: 1;
+  min-width: 300px;
+}
+
+.aviacion-texto h2 {
+  font-size: 28px;
+  color: rgb(127, 127, 22);
+}
+
+.aviacion-texto h3 {
+  color: #005b8f;
+  margin-top: 20px;
+}
+
+.aviacion-texto ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.acciones {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.acciones button {
+  background-color: #a28be2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.acciones button:hover {
+  background-color: #520bdf;
+}
+
+.aviacion-img {
+  text-align: center;
+  min-width: 200px;
+}
+
+.aviacion-img img {
+  width: 200px;
+  height: 200px;
+  border-radius: 10%;
+  margin-top: 120%;
+  display: flex;
+}
+
+/* BIENESTAR MENTAL*/
+.mental-section {
+  padding: 40px;
+  background-image: url('../img/fon_mtl.jpg');
+  background-size: cover;
+  color: #080530;
+}
+
+.highlights {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.item {
+  display: flex;
+  gap: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 0 5px rgba(30, 12, 214, 0.3);
+  width: 100%;
+}
+
+.item img {
+  width: 130px;
+  height: 130px;
+  border-radius: 12px;
+}
+
+/* GALERÍA 3D  */
+.box {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  animation: animate 35s linear infinite;
+  margin: 250px auto;
+}
+
+@keyframes animate {
+  0% {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+
+  100% {
+    transform: perspective(1000px) rotateY(360deg);
+  }
+}
+
+.box span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--i)* 45deg)) translateZ(400px);
+  -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004);
+}
+
+.box span img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*ENTORNOS SALUDABLES*/
+.entorno-section {
+  background-color: #1e6797;
+  color: #b93131;
+  padding: 50px 20px;
+}
+
+.entorno-section .galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.entorno-section .galeria .proyecto {
+  position: relative;
+  max-width: 340px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.entorno-section .galeria .proyecto img {
+  width: 100%;
+  display: block;
+}
+
+.entorno-section .galeria .proyecto .overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: linear-gradient(rgba(28, 182, 152, .8), rgba(28, 182, 152, .8));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 18px;
+  letter-spacing: 2px;
+  opacity: 0;
+  transition: 0.8s;
+}
+
+.entorno-section .overlay h3 {
+  margin-bottom: 100px;
+  transition: 0.8s;
+}
+
+.entorno-section .proyecto:hover .overlay {
+  opacity: 1;
+}
+
+.entorno-section .proyecto:hover h3 {
+  margin-bottom: 0px;
+}
+
+#contacto {
+  background-image: url('../img/fon-2cont.jpg');
+  padding: 40px 20px;
+  font-family: "Segoe UI", sans-serif;
+  color: #211884;
+}
+
+.contenedor-contacto {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.formulario {
+  flex: 1 1 300px;
+  max-width: 500px;
+  padding: 20px;
+  border: 2px solid #0ed0de;
+  border-radius: 10px;
+  background-color: #8ceaf7;
+  box-shadow: 0 0 10px rgba(48, 17, 185, 0.1);
+}
+
+.formulario h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #3a0cde;
+}
+
+.formulario label {
+  display: block;
+  margin: 12px 0 6px;
+  font-weight: bold;
+}
+
+.formulario input,
+.formulario textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #0c63ba;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+  border-color: #0be348;
+  outline: none;
+}
+
+.formulario button {
+  background-color: #43a047;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.formulario button:hover {
+  background-color: #388e3c;
+}
+
+.mapa {
+  flex: 300px;
+  max-width: 500px;
+  padding: 20px;
+}
+
+.mapa h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #8e383c;
+}
+
+
+footer {
+  background-color: #308b2a;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  width: 100%;
+  margin-top: 40px;
+  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.2);
+}
